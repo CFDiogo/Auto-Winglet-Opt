@@ -1,0 +1,11 @@
+load
+input_geom.avl
+case input_run.run
+oper
+x
+fn
+output_file
+a
+quit
+
+

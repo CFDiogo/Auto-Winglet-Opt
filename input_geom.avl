@@ -1,0 +1,54 @@
+jet wing
+0.8	              !   Mach
+0     0     0.0       !   iYsym  iZsym  Zsym
+9.375  1.5 15.0      !   Sref   Cref   Bref   reference area, chord, span
+0.25 0.0   0.0        !   Xref   Yref   Zref   moment reference location (arb.)
+0.01048               !   CDp
+#
+#==============================================================
+#
+SURFACE
+Wing
+20 1.0   20  -2.0  ! Nchord   Cspace   Nspan  Sspace
+#
+YDUPLICATE
+0.0
+#
+# twist angle bias for whole surface
+ANGLE
+     1.00000    
+#
+SCALE
+  1.0   1.0   1.0
+#
+# x,y,z bias for whole surface
+TRANSLATE
+    3.  0.  1.2 
+#
+#-----------------------------
+SECTION
+     0.0          0.0        0.0         2.       0.000 
+AFILE 
+B737.dat
+#-----------------------------
+SECTION
+     1.0          2.0        0.0         1.35        0.000 
+AFILE 
+B737.dat
+#-----------------------------
+SECTION
+    2.5           5.0        0.0          1.       0.000  
+AFILE 
+B737.dat
+#-----------------------------
+SECTION  
+    3.5           7.25        0.0          0.8        0.000  
+AFILE 
+EPPLERE850.dat
+#-----------------------------
+SECTION    ! winglet
+ 4.046169297384399           7.509170545282286     0.36006691811283476    0.352443116257719  0.000	 
+AFILE 
+EPPLERE850.dat
+#-----------------------------
+#==============================================================
